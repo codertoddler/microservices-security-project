@@ -1,0 +1,3 @@
+[FAIL] 5.10 Ensure that the memory usage for container is limited (Automated)
+[FAIL] 5.11 Ensure that CPU priority is set appropriately on container (Automated)
+[FAIL] 5.14 Ensure that the 'on-failure' container restart policy is set to '5' (Automated)
