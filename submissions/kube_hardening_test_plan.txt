@@ -1,0 +1,17 @@
+1. How will you test the changes?
+
+a. The changes will be tested in a "test cluster" different from "production cluster". Also
+app manifests will be templatized and separate helm value charts will be created for test and production.
+b. The audit logs will be captured and monitored to ensure all risks are accounted.
+c. Test if containers and pods are run with least privilege.
+d. Scan containers and pods for vulnerabilities or misconfigurations.
+e. Test if strong authentication and authorization is used to limit user and administrator access as well as to limit the attack surface.
+
+2. How will you ensure the changes don't negatively affect your cluster?
+
+a. The changes are tested in non production cluser. 
+b. The falco metrics will be continously monitored with grafana.
+c. Health metrics shall be monitored carefully to ensure the tests are running within specified parameters.
+d. The changes can be rolled back as the cluster.yml is git versioned in case of any uncontrolled situation.
+e. Alerts can be setup in grafana to communicate any events outside the test parameters so that the situation can be addressed without further escalation.
+

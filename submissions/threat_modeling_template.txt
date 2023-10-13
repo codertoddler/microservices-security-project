@@ -1,3 +1,53 @@
+*** Docker Attack Surfaces ***
+
+1. Docker Client compromise
+
+Attacker can spoof traffic from client to host and thereby gaining unauthorized access - SPOOFING
+
+2. Dockerfile misconfiguration
+
+Attacker can modify Dockerfile to introduce unintended code/images which can lead to malicious code running in the container and overall cluster compromise - TAMPERING
+
+3. Use of --privilege flag in the host
+
+Any elevation of privilege in the host can lead to unintended access across containers leading to isolation tampering - ELEVATION OF PRIVILEGE
+
+4. Misconfiguration of host
+
+If the configuration of the host is misconfigured, it might disclose sensitive information leading to unintended defaults leading to a potential widended security incident - INFORMATION DISCLOSURE
+
+5. Docker Image Security
+
+Once an Attacker gains unauthorized access, it can lead to malicious images being committed without authorization and image security is comporomised - REPUDIATION
+
+
+*** Kubernetes System Attack Surfaces***
+
+Attack Surfaces
+
+1. Kube API Server compromise
+
+Attacker can spoof traffic to API Server and thereby gaining unauthorized access - SPOOFING
+
+2. etcd misconfiguration
+
+Attacker can modify etcd configuration to modify pod specs leading to pod eviction/other unintended consequences - TAMPERING
+
+3. etcd sensitive information comprimise
+
+Once an attacker gains access to etcd key-value store, it can lead to sentive information discosure  - INFORMATION DISCLOSURE
+
+4. Kube API Server overwhelming
+
+Attacker can overwhelm the API Server with excessive number of requests thereby leading to wrong scehduling of pods  - DENIAL OF SERVICE
+
+5. Kube API Server authorization abuse
+
+Once an Attacker gains unauthorized access to API server, it can lead to abuse of privilege flag - ELEVATION OF PRIVILEGE
+
+** Hardening Docker Environment **
+
 [FAIL] 5.10 Ensure that the memory usage for container is limited (Automated)
 [FAIL] 5.11 Ensure that CPU priority is set appropriately on container (Automated)
 [FAIL] 5.14 Ensure that the 'on-failure' container restart policy is set to '5' (Automated)
+

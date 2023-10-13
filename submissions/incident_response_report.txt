@@ -1,0 +1,28 @@
+1. Incident commander name: Kishore 
+
+2. Executive Summary of what happened:
+
+A CookieMiner incident was discoverd by the monitoring servives in two our clusters.
+
+The incident happened at 12:02 PM on 2-OCT-2022.
+
+3. Summary of what was affected:
+
+The "User Authorization" & "Payment" clusters were affected by this incident.
+
+4. Summmry of the impact:
+
+The incident has led to CPU Starvation among all the pods in "User Authorization" & "Payment" clusters and rendered the services unavailable.
+
+5. Summary of the remediation steps:
+
+The following pods that intruded in the affected clusters as part of the incident have been evicted from the clusters .
+
+a.cryptotonight
+b.minergate
+c.moneropool
+
+6. Summary of lessons learned:
+
+Review of each deployment needs to happen w.r.t security implications and check if hardening needs to be re-exeucted.
+To ensure the clusters are hardened for each deployment after review.
